@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fotografía 360</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.rawgit.com/mistic100/Photo-Sphere-Viewer/3.1.0/dist/photo-sphere-viewer.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/threejs/r70/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/mistic100/Photo-Sphere-Viewer/3.1.0/dist/photo-sphere-viewer.min.js"></script>
+    <style>
+        #photosphere { height: 600px; width: 100%; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <div id="photosphere"></div>
+    <script>
+        // 360 viewer
+        var PSV = new PhotoSphereViewer({
+            panorama: 'https://cdn.rawgit.com/mistic100/Photo-Sphere-Viewer/3.1.0/example/Bryce-Canyon-National-Park-Mark-Doliner.jpg', 
+            container: 'photosphere',
+            loading_img: 'https://raw.githubusercontent.com/mistic100/Photo-Sphere-Viewer/3.1.0/example/photosphere-logo.gif',
+            navbar: 'autorotate zoom download fullscreen',
+            caption: '<i>Galeo Tech</i>',
+            default_fov: 65,
+            mousewheel: false,
+            size: {
+                height: 400
+            }
+        });
+    </script>
+</body>
+</html>
+
